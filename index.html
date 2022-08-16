@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .main__text {
+        margin: 1rem;
+        background-color: rgb(13, 232, 232);
+        padding: 3rem;
+      }
+      .main__box1 {
+        background-color: azure;
+        padding: 3rem;
+        margin: 1rem;
+      }
+      .box1 {
+        background-color: hwb(90 50% 50%);
+        padding: 2rem;
+      }
+      .main--box2 {
+        background-color: lch(10% 100 10deg);
+      }
+      .main--box3 {
+        color: green;
+        background-color: currentColor;
+      }
+      .main--box4 {
+        font-size: clamp(1rem, 2.5vw, 5rem);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="main__text text1">
+        <h3>HWB</h3>
+        <p>
+          HWB stands for Hue, Whiteness, and Black. Hue value is in either
+          degree, radian, or gradient. If only number is specified then it is
+          assumed as degree value. Whereas value of W and B are in percent. If
+          W=0% and B=100% than it produces black. W=100% and B=0% produces
+          white. And W=505 and B=50% produces gray.
+        </p>
+      </div>
+      <div class="main__box1 main--box1">
+        <p>Example with: W=50% and B=50%</p>
+        <div class="box1">
+          <p>Box1</p>
+        </div>
+      </div>
+      <div class="main__text text1">
+        <h3>LCH</h3>
+        <p>
+          LCH stands for Lab, Chroma, and Hue. LCH can be used to create
+          palettes across entirely different colors, with predictable results.
+          Please note that LCH hue is not the same as HSL hue and LCH chroma is
+          not the same as HSL saturation. L specifies CIE lightness: 0 % black
+          and 100% white. For C, minimum value is 0 and practically, maximum
+          value is 230. The third argument H is the hue angle. 0deg points along
+          the positive "a" axis (toward purplish red), 90deg points along the
+          positive "b" axis (toward mustard yellow), 180deg points along the
+          negative "a" axis (toward greenish cyan), and 270deg points along the
+          negative "b" axis (toward sky blue).
+        </p>
+      </div>
+      <div class="main__box1 main--box1 main--box2">
+        <p>Example with: L=10%, C=100 and H=10deg</p>
+        <div class="box1 box2">
+          <p>Box2</p>
+        </div>
+      </div>
+      <div class="main__text text1">
+        <h3>currentColor</h3>
+        <p>
+          If currentcolor is used as the value of the color property, it instead
+          takes its value from the inherited value of the color property.
+        </p>
+      </div>
+      <div class="main__box1 main--box1 main--box3">
+        <p style="color: white">
+          Example using color=green; and background-color=currentColor;
+        </p>
+        <div class="box1 box3">
+          <p>Box3</p>
+        </div>
+      </div>
+      <div class="main__text text1">
+        <h3>Clamp</h3>
+        <p>
+          clamp() enables selecting a middle value within a range of values
+          between a defined minimum and maximum. It takes three parameters: a
+          minimum value, a preferred value, and a maximum allowed value. The
+          minimum value is the smallest (most negative) value. If the preferred
+          value is less than this value, the minimum value will be used. The
+          preferred value is the expression whose value will be used as long as
+          the result is between the minimum and maximum values. The maximum
+          value is the largest (most positive) expression value. The value of
+          the property will be assigned if the preferred value is greater than
+          this upper bound.
+        </p>
+      </div>
+      <div class="main__box1 main--box1 main--box4">
+        <p>Example of Clamp with minimum, preferred, and maximum value.</p>
+        <div class="box1 box4">
+          <p>Box4</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
